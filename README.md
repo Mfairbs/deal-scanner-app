@@ -1,16 +1,59 @@
-# React + Vite
+# NSW Commercial Property Deal Scanner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for analyzing and scoring commercial property listings to identify distressed opportunities in New South Wales.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Automated Distress Scoring**: Analyzes property listings based on:
+  - Distress keywords (mortgagee, receivership, must sell, etc.)
+  - Days on market (DOM)
+  - Vacancy indicators
 
-## React Compiler
+- **Interactive Dashboard**:
+  - Filter by priority, property type, suburb, price range
+  - Sort and search capabilities
+  - Expandable property details
+  - Visual analytics of distress signals
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **CSV Import/Export**: Upload property listings and export scored results
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- Tailwind CSS
+- Recharts for data visualization
+- PapaParse for CSV handling
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+## Usage
+
+1. Upload a CSV file containing property listings
+2. The app will automatically score properties based on distress signals
+3. Filter and analyze results
+4. Export scored properties to CSV
+
+## Deployment
+
+This app is deployed on GitHub Pages: [https://mfairbs.github.io/deal-scanner-app/](https://mfairbs.github.io/deal-scanner-app/)
